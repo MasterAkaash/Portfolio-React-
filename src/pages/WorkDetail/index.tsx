@@ -1,23 +1,29 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import { Img, Text } from "components";
 import Footer from "components/Footer";
 
 const WorkDetailPage: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="bg-white-A700 flex flex-col font-heebo items-center justify-end mx-auto pt-[25px] w-full">
         <div className="flex flex-col justify-start w-full">
           <div className="flex flex-row items-start justify-end md:ml-[0] ml-[865px] md:px-5 w-1/5 md:w-full">
             <Text
-              className="text-blue_gray-900 text-right text-xl"
+              className="common-pointer text-blue_gray-900 text-right text-xl"
               size="txtHeeboMedium20Bluegray900"
+              onClick={() => navigate("/blog")}
             >
               Blog
             </Text>
             <Text
-              className="ml-[35px] text-red-A200 text-right text-xl"
+              className="common-pointer ml-[35px] text-red-A200 text-right text-xl"
               size="txtHeeboMedium20RedA200"
+              onClick={() => navigate("/workdetail")}
             >
               Works
             </Text>
